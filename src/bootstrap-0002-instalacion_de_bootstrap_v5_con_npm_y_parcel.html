@@ -145,40 +145,42 @@
                 que se tenga instalado Node.js y cierta familiaridad con el
                 terminal.
               </p>
-              <h3>Crear una Carpeta de Proyecto y Configurar npm</h3>
+              <h3>Crear una Carpeta de Proyecto y Configurar npm </h3>
               <p>
                 Se creará la carpeta
-                <code class="language-bash">mi-proyecto</code> e
+                <code class="language-bash">EduardoHerreraForero</code> e
                 inicializaremos npm con el argumento
                 <code class="language-bash">-y</code> para evitar que haga
                 todas las preguntas interactivas.
               </p>
               <div class="ej-sintaxis">
                 <pre data-src-status="loaded" tabindex="0">
-                    <code class="language-bash" data-prismjs-copy="Copy">
-                      mkdir my-project && cd my-project
+                  <code class="language-bash" data-prismjs-copy="Copy">
+                     FOLDER_NAME="EduardoHerreraForero"
+                      mkdir "$FOLDER_NAME" && cd "$FOLDER_NAME"
+
                       npm init -y
-                    </code>
-                  </pre>
+                  </code>
+                </pre>
               </div>
               <h3 id="configuracionEspacioTrabajo">
                 Configuración del Espacio de Trabajo
               </h3>
               <p>
                 Ya se ha creado la carpeta
-                <code class="language-bash">my-project</code> e inicializado
+                <code class="language-bash">EduardoHerreraForero</code> e inicializado
                 npm. Ahora también se creará la carpeta
                 <code class="language-bash">src</code>, la hoja de estilos y
                 el archivo JavaScript para completar la estructura del
                 proyecto. Ejecutar los siguiente comandos desde
-                <code class="language-bash">mi-proyecto</code>, o crear
+                <code class="language-bash">EduardoHerreraForero</code>, o crear
                 manualmente la estructura de carpetas y archivos que se
                 muestra a continuación.
               </p>
               <div class="ej-sintaxis">
                 <pre data-src-status="loaded" tabindex="0">
                     <code class="language-bash" data-prismjs-copy="Copy">
-                      mkdir {src,src/js,src/scss}
+                     mkdir {src,src/js,src/scss}
                       touch src/index.html src/js/main.js src/scss/styles.scss
                     </code>
                   </pre>
@@ -198,13 +200,15 @@
               <div class="ej-sintaxis">
                 <pre data-src-status="loaded" tabindex="0">
                     <code class="language-bash" data-prismjs-copy="Copy">
-                      npm i --save-dev parcel
+                      npm install --save-dev parcel@latest
                     </code>
                   </pre>
               </div>
+              <p>Se debe verificar la versión instalada de Parcel, debe ser <code class="language-bash">2.16</code>
+                con el comando en consola <code class="language-bash">npx parcel --version</code>.</p>
             </div>
             <div id="instalacion-bootstrap-v5" class="mt-5">
-              <h2>Instalación de Bootstrap</h2>
+              <h2>Instalación de Bootstrap </h2>
               <p>
                 Ahora se puede instalar Bootstrap.También se instalará Popper
                 ya que los desplegables, popovers y tooltips dependen de él
@@ -214,7 +218,7 @@
               <div class="ej-sintaxis">
                 <pre data-src-status="loaded" tabindex="0">
                     <code class="language-bash" data-prismjs-copy="Copy">
-                      npm i --save bootstrap @popperjs/core
+                      npm install --save bootstrap@latest @popperjs/core@latest
                     </code>
                   </pre>
               </div>
@@ -226,7 +230,7 @@
             </div>
 
             <div id="configuracion-parcel" class="mt-5">
-              <h2>Configuración de Parcel <span class="text-blink-yellow">Editado</span></h2>
+              <h2>Configuración de Parcel </h2>
               <p>
                 El archivo
                 <span class="fw-bold text-warning">src/index.html</span> se
@@ -342,7 +346,7 @@
               </div>
               <p>Ahora el punto de entrada es el archivo index.html.</p>
               <p>
-                <span class="text-blink-yellow">Nuevo</span> Para asegurarse
+                Para asegurarse
                 que Parcel siempre genere archivos con el mismo nombre (como
                 <code class="language-bash">index.js</code>
                 en lugar de nombres hash), se debe utilizar la configuración
@@ -353,14 +357,13 @@
               <div class="ej-sintaxis">
                 <pre data-src-status="loaded" tabindex="0">
                     <code class="language-json" data-prismjs-copy="Copy">
-                      {
+                     {
                         "extends": "@parcel/config-default",
-                        "transformers": {},
-                        "namers": {
-                          "parcel-namer-static": {}
-                        }
+                        "namers": [
+                          "@parcel/namer-default"
+                        ]
                       }
-                    </code>
+                   </code>
                   </pre>
               </div>
               <p>
@@ -374,7 +377,7 @@
               </p>
               <p>
                 Desde ahora se puede iniciar Parcel, en la carpeta
-                <span class="fw-bold text-warning">my-project</span>
+                <span class="fw-bold text-warning">EduardoHerreraForero</span>
                 en el terminal, ejecuta cualquiera de los dos scripts npm
                 recién añadidos:
               </p>
@@ -469,7 +472,7 @@
             </div>
 
             <div id="instalacion-de-un-servidor-local" class="mt-5">
-              <h2>Instalación de un Servidor Local <span class="text-blink-yellow">Nuevo</span></h2>
+              <h2>Instalación de un Servidor Local </h2>
               <!-- Qué Es un Servidor Local  -->
               <div id="que-es-un-servidor-local">
                 <h3>Qué Es un Servidor Local </h3>
@@ -667,14 +670,7 @@
                     <code class="language-json" data-prismjs-copy="Copy">
                       {
                         "scripts": {
-                          "start": "http-server ./dist -p 8080 -c-1"
-                        }
-                      }
-
-                      ó
-                      
-                      {
-                        "scripts": {
+                          "start": "http-server ./dist -p 8080 -c-1",
                           "dev": "http-server ./dist -p 8080 -c-1"
                         }
                       }
@@ -686,7 +682,7 @@
                 <!-- Sintaxis -->
                 <div class="ej-sintaxis">
                   <pre data-src-status="loaded" tabindex="0">
-                    <code class="language-html" data-prismjs-copy="Copy">
+                    <code class="language-bash" data-prismjs-copy="Copy">
                       npm start ó node --run start
                       
                       ó
@@ -709,9 +705,7 @@
             </div>
 
             <div id="rimraf-herramienta-para-eliminar-carpetas-y-archivos" class="mt-5">
-              <h2><code class="language-bash">rimraf</code> : Herramienta para Eliminar Carpetas y Archivos <span
-                  class="text-blink-yellow">Nuevo</span>
-              </h2>
+              <h2><code class="language-bash">rimraf</code>: Herramienta para Eliminar Carpetas y Archivos</h2>
               <p><code class="language-bash">rimraf</code> es una herramienta de <code
                   class="language-javascript">Node.js</code> que elimina archivos y carpetas
                 de forma recursiva (borra todo el contenido interno). Es equivalente al comando <code
@@ -756,12 +750,12 @@
                 <div class="ej-sintaxis">
                   <pre data-src-status="loaded" tabindex="0">
                     <code class="language-json" data-prismjs-copy="Copy">
-                      "scripts": {
-                        "dev": "rimraf dist && parcel --lazy --open http://localhost:1234/ --no-source-maps",
-                        "start": "rimraf .parcel-cache dist && parcel serve",
-                        "build": "rimraf .parcel-cache dist && parcel build --public-url ./ --no-source-maps",
-                        "test": "echo \"Error: no test specified\" && exit 1"
-                      },                      
+  "scripts": {
+    "dev": "http-server ./dist -p 8080 -c-1",
+    "start": "rimraf .parcel-cache dist && parcel serve",
+    "build": "rimraf .parcel-cache dist && parcel build --public-url ./ --no-source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },                    
                     </code>
                   </pre>
                 </div>
@@ -779,7 +773,7 @@
                   <pre data-src-status="loaded" tabindex="0">
                     <code class="language-json" data-prismjs-copy="Copy">
                       {
-                        "name": "eduardoherreraforero",
+                        "name": "EduardoHerreraForero",
                         "source": "src/index.html",
                         "version": "8.15.0",
                         "description": "",
@@ -815,6 +809,243 @@
               </div>
               <!-- Archivo package.json Final  fin -->
             </div>
+
+            <div id="ultimas-configuraciones-del-proyecto" class="mt-5">
+              <h2>Últimas Configuraciones del Proyecto</h2>
+              <p>En el final de la configuración de la plantilla se instalan dos archivos muy importantes:
+              <ul>
+                <li><code class="language-plaintext">.gitignore</code>: Archivo que le dice a Git qué NO subir al
+                  repositorio.</li>
+                <li><code class="language-plaintext">.gitattributes</code>: Archivo que le indica a Git cómo manejar
+                  ciertos archivos.</li>
+              </ul>
+              </p>
+
+              <!-- Archivo .gitignore -->
+              <div id="archivo-gitignore">
+                <h3>Archivo <code class="language-plaintext">.gitignore</code></h3>
+                <p>El archivo <code class="language-plaintext">.gitignore</code> es un archivo de configuración de
+                  Git que le indica qué archivos o carpetas NO deben ser incluidos en el control de versiones.</p>
+
+                <p>Con este archivo se evita subir al repositorio archivos que:</p>
+                <ul>
+                  <li>No son necesarios para el proyecto.</li>
+                  <li>Son generados automáticamente.</li>
+                  <li>Contienen información sensible.</li>
+                  <li>Son específicos de la máquina local.</li>
+                </ul>
+
+                <p>Ejemplo típico de un archivo <code class="  language-plaintext">.gitignore</code> en un proyecto
+                  <code class="language-plaintext">node.js</code>:
+                </p>
+                <!-- Sintaxis -->
+                <div class="ej-sintaxis">
+                  <pre data-src-status="loaded" tabindex="0">
+                      <code class="language-gitignore" data-prismjs-copy="Copy">
+                        # Dependencias
+                        node_modules/
+
+                        # Archivos de construcción  
+                        dist/
+                        build/
+                        .parcel-cache/
+
+                        # Variables de entorno
+                        .env
+                        .env.local
+
+                        # Logs
+                        *.log
+                        npm-debug.log*
+
+                        # Sistema operativo
+                        .DS_Store
+                        Thumbs.db
+
+                        # IDEs
+                        .vscode/
+                        .idea/
+                        *.swp
+                      </code>
+                    </pre>
+                </div>
+                <!-- Sintaxis fin -->
+
+                <p>Este archivo es importante debido a:</p>
+                <ul>
+                  <li>
+                    Evita contaminar el repositorio: <code class="language-plaintext">node_modules/</code> puede tener
+                    miles de archivos que se instalan con <code class="language-plaintext">npm install</code>.
+                  </li>
+                  <li>
+                    Protege información sensible: API keys, contraseñas en archivos <code
+                      class="language-plaintext">.env</code>.
+                  </li>
+                  <li>
+                    Reduce el tamaño del repo: No subes archivos generados que otros pueden crear localmente.</li>
+                  <li>
+                    Evita conflictos: Archivos de configuración personal del IDE no afectan a otros.</li>
+                </ul>
+
+                <p>Cómo se usa:</p>
+                <ul>
+                  <li>Crea el archivo <code class="language-plaintext">.gitignore</code> en la raíz de tu proyecto.</li>
+                  <li>Lista los archivos/carpetas a ignorar.</li>
+                  <li>Git automáticamente los excluirá.</li>
+                </ul>
+              </div>
+              <!-- Archivo .gitignore fin -->
+
+              <!-- Archivo .gitattributes -->
+              <div id="Archivo-gitattributes">
+                <h3>Archivo <code class="language-plaintext">.gitattributes</code></h3>
+                <p>El archivo <code class="language-plaintext">.gitattributes</code> es un archivo de configuración de
+                  Git que define atributos específicos para archivos y carpetas en el repositorio.</p>
+
+                <p>Este archivo se usa para:</p>
+                <ul>
+                  <li>Normalizar finales de línea (lo más común):
+                    <!-- Sintaxis -->
+                    <div class="ej-sintaxis">
+                      <pre data-src-status="loaded" tabindex="0">
+                    <code class="language-gitattributes" data-prismjs-copy="Copy">
+                      # Asegurar que todos usen LF en el repo
+                      * text=auto
+                      *.sh text eol=lf
+                      *.bat text eol=crlf           
+                    </code>
+                  </pre>
+                    </div>
+                    <!-- Sintaxis fin -->
+                  </li>
+                  <li>Marcar archivos como binarios: <!-- Sintaxis -->
+                    <div class="ej-sintaxis">
+                      <pre data-src-status="loaded" tabindex="0">
+                        <code class="language-gitattributes" data-prismjs-copy="Copy">
+                          # Archivos binarios
+                          *.png binary
+                          *.jpg binary
+                          *.pdf binary
+                        </code>
+                      </pre>
+                    </div>
+                    <!-- Sintaxis fin -->
+                  </li>
+                  <li>Excluir archivos de exportaciones/archivos:
+                    <!-- Sintaxis -->
+                    <div class="ej-sintaxis">
+                      <pre data-src-status="loaded" tabindex="0">
+                        <code class="language-gitattributes" data-prismjs-copy="Copy">
+                          # Excluir de exportaciones (opcional)
+                          .gitattributes export-ignore
+                          .gitignore export-ignore
+                          tests/ export-ignore
+                        </code>
+                      </pre>
+                    </div>
+                    <!-- Sintaxis fin -->
+                  </li>
+                  <li>Definir cómo se muestran los diffs:
+                    <!-- Sintaxis -->
+                    <div class="ej-sintaxis">
+                      <pre data-src-status="loaded" tabindex="0">
+                        <code class="language-gitattributes" data-prismjs-copy="Copy">
+                          *.json diff=json
+                          *.md diff=markdown
+                          *.min.js -diff
+                        </code>
+                      </pre>
+                    </div>
+                    <!-- Sintaxis fin -->
+                  </li>
+                  <li>Configurar estrategias de fusión (<span class="fst-italic">merge strategies</span>):
+                    <!-- Sintaxis -->
+                    <div class="ej-sintaxis">
+                      <pre data-src-status="loaded" tabindex="0">
+                        <code class="language-gitattributes" data-prismjs-copy="Copy">
+                          package-lock.json merge=ours
+                          yarn.lock merge=ours
+                        </code>
+                      </pre>
+                    </div>
+                    <!-- Sintaxis fin -->
+                  </li>
+                  <li>Lenguaje para estadísticas de GitHub (Linguist):
+                    <!-- Sintaxis -->
+                    <div class="ej-sintaxis">
+                      <pre data-src-status="loaded" tabindex="0">
+                        <code class="language-gitattributes" data-prismjs-copy="Copy">
+                          *.js linguist-language=JavaScript
+                          docs/* linguist-documentation
+                          vendor/* linguist-vendored        
+                        </code>
+                      </pre>
+                    </div>
+                    <!-- Sintaxis fin -->
+                  </li>
+                </ul>
+
+                <p>Ejemplo típico de un archivo <code class="language-plaintext">.gitattributes</code> en un proyecto
+                  <code class="language-plaintext">node.js</code>:
+                </p>
+                <!-- Sintaxis -->
+                <div class="ej-sintaxis">
+                  <pre data-src-status="loaded" tabindex="0">
+                      <code class="language-gitattributes" data-prismjs-copy="Copy">
+                        # Normalizar todos los archivos de texto a LF en el repositorio
+                        * text=auto eol=lf
+
+                        # Archivos de código siempre con LF
+                        *.html text eol=lf
+                        *.css  text eol=lf
+                        *.scss text eol=lf
+                        *.js   text eol=lf
+                        *.jsx  text eol=lf
+                        *.ts   text eol=lf
+                        *.tsx  text eol=lf
+                        *.json text eol=lf
+                        *.md   text eol=lf
+                        *.yaml text eol=lf
+                        *.yml  text eol=lf
+
+                        # Scripts de shell siempre con LF
+                        *.sh   text eol=lf
+                        *.bash text eol=lf
+
+                        # Archivos especiales de Windows que sí necesitan CRLF
+                        *.bat  text eol=crlf
+                        *.cmd  text eol=crlf
+                        *.ps1  text eol=crlf
+
+                        # Archivos binarios
+                        *.png  binary
+                        *.jpg  binary
+                        *.jpeg binary
+                        *.gif  binary
+                        *.ico  binary
+                        *.pdf  binary
+                        *.zip  binary
+                        *.gz   binary
+                        *.tar  binary
+                        *.mp4  binary
+                        *.mp3  binary
+                        *.woff binary
+                        *.woff2 binary
+                        *.ttf  binary
+                        *.eot  binary
+
+                        # Excluir de exportaciones (opcional)
+                        .gitattributes export-ignore
+                        .gitignore export-ignore
+                        .editorconfig export-ignore                       
+                      </code>
+                    </pre>
+                </div>
+                <!-- Sintaxis fin -->
+              </div>
+              <!-- Archivo gitattributes fin -->
+            </div>
+
           </div>
         </article>
         <!-- fin Parcel NPM -->
@@ -881,8 +1112,7 @@
                 <a href="#instalacion-bootstrap-v5" class="simple-link">Instalación de Bootstrap</a>
               </div>
               <div class="menu-item">
-                <a href="#configuracion-parcel" class="simple-link ">Configuración de Parcel <span
-                    class="text-blink-yellow">Editado</span></a>
+                <a href="#configuracion-parcel" class="simple-link ">Configuración de Parcel</a>
               </div>
 
               <div class="menu-item">
@@ -895,15 +1125,20 @@
               </div>
 
               <div class="menu-item">
-                <a href="#instalacion-de-un-servidor-local" class="simple-link">Instalación de un Servidor Local <span
-                    class="text-blink-yellow">Nuevo</span></a>
+                <a href="#instalacion-de-un-servidor-local" class="simple-link">Instalación de un Servidor Local</a>
               </div>
 
               <div class="menu-item">
                 <a href="#rimraf-herramienta-para-eliminar-carpetas-y-archivos" class="simple-link"><code
-                    class="language-bash">rimraf</code> : Herramienta
-                  para Eliminar Carpetas y Archivos <span class="text-blink-yellow">Nuevo</span></a>
+                    class="language-bash">rimraf</code>:&nbsp; Herramienta
+                  para Eliminar Carpetas y Archivos</a>
               </div>
+
+              <div class="menu-item">
+                <a href="#ultimas-configuraciones-del-proyecto" class="simple-link">Últimas Configuraciones del
+                  Proyecto</a>
+              </div>
+
               <!-- Comentarios  -->
               <div class="menu-item">
                 <a href="#comments" class="simple-link">Comentarios</a>
@@ -956,7 +1191,7 @@
             </a>
           </div>
           <div>
-            <a href="https://www.facebook.com/eduardoherreraforero/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/EduardoHerreraForero/" target="_blank" rel="noopener noreferrer">
               <i class="bi bi-facebook fs-1"></i>
             </a>
           </div>
