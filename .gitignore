@@ -2,3 +2,6 @@
 .parcel-cache/
 node_modules/
 dist/
+
+# Ignora archivos stackdump
+*.stackdump
