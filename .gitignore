@@ -2,6 +2,9 @@
 .parcel-cache/
 node_modules/
 dist/
+debug.log
+*.log
+src/temp.html
 
 # Ignora archivos stackdump
 *.stackdump
