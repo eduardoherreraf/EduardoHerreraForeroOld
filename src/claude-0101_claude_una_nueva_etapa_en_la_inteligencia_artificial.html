@@ -1,0 +1,649 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+  <!-- Metaetiquetas -->
+  <meta charset="utf-8" />
+
+  <title>Claude: una Nueva Etapa en la Inteligencia Artificial - Ing. Eduardo Herrera Forero</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Introducción a Claude, el asistente de inteligencia artificial de Anthropic: qué es, para qué sirve y cómo ayuda a escribir, analizar datos y programar, presentado por el Ing. Eduardo Herrera Forero." />
+  <meta name="keywords"
+    content="Claude, Claude AI, Anthropic, asistente de inteligencia artificial, IA generativa, modelos de lenguaje, qué es Claude, introducción a Claude, Eduardo Herrera Forero" />
+  <meta name="author" content="Ing. Eduardo Herrera Forero" />
+  <meta name="application-name" content="EHF" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical"
+    href="https://eduardoherreraf.github.io/claude-0101_claude_una_nueva_etapa_en_la_inteligencia_artificial.html" />
+  <!-- Fin Metaetiquetas -->
+
+  <!-- Open Graph data -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title"
+    content="Claude: una Nueva Etapa en la Inteligencia Artificial - Ing. Eduardo Herrera Forero" />
+  <meta property="og:description"
+    content="Introducción a Claude, el asistente de inteligencia artificial de Anthropic: qué es, para qué sirve y cómo ayuda a escribir, analizar datos y programar, presentado por el Ing. Eduardo Herrera Forero." />
+  <meta property="og:image" content="https://res.cloudinary.com/u0xebdyd/image/upload/v1788813438/claude-og.png" />
+  <meta property="og:image:alt" content="Claude, asistente de inteligencia artificial de Anthropic" />
+  <meta property="og:url"
+    content="https://eduardoherreraf.github.io/claude-0101_claude_una_nueva_etapa_en_la_inteligencia_artificial.html" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Ing. Eduardo Herrera Forero" />
+  <!-- fin Open Graph data -->
+
+  <!-- Twitter cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title"
+    content="Claude: una Nueva Etapa en la Inteligencia Artificial - Ing. Eduardo Herrera Forero" />
+  <meta name="twitter:description"
+    content="Qué es Claude, el asistente de IA de Anthropic, y cómo ayuda a escribir, analizar datos y programar" />
+  <meta name="twitter:image"
+    content="https://res.cloudinary.com/u0xebdyd/image/upload/v1788813170/claude-twitter-summary.png" />
+  <meta name="twitter:image:alt" content="Claude, asistente de inteligencia artificial de Anthropic" />
+  <meta name="twitter:site" content="@ehfeduardo" />
+  <meta name="twitter:creator" content="@ehfeduardo" />
+  <!-- Fin Twitter cards -->
+
+  <!-- iconos -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- fin iconos -->
+
+  <script type="module" defer src="./js/main.js"></script>
+
+  <meta name="google-site-verification" content="2H5ZMCD1_xl7oxaiqnopfdQBnIXVIOfmW0UBSa5sQJc" />
+</head>
+
+<body>
+  <!-- Barra de Navegación -->
+  <nav class="navbar navbar-expand-lg border-1 border fixed-top nav-underline">
+    <div class="container-fluid">
+      <!-- Enlace a la página principal con el logo y nombre -->
+      <a class="navbar-brand d-flex align-items-center ms-2" href="index.html">
+        <img src="./images/logo.png" alt="Logo de Ing. Eduardo Herrera Forero" width="30" height="30"
+          class="d-inline-block align-text-top me-1" />
+        <span class="d-none d-lg-inline">Ing. Eduardo Herrera Forero</span>
+      </a>
+      <!-- Botón para activar el menú en dispositivos pequeños -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú de navegación -->
+      <div class="collapse navbar-collapse ms-auto text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-lg-end w-100">
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html">SOBRE MÍ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html#resume">EXPERIENCIA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html#portfolio">PORTAFOLIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html#studies">ESTUDIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1 publicaciones-activo" href="index.html#blog">PUBLICACIONES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html#contact">CONTACTO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Barra de Navegación -->
+
+  <!--  Principal  -->
+  <div class="container-fluid" id="claude-una-nueva-etapa-en-la-inteligencia-artificial">
+    <main class="row">
+      <section class="pb-3 pt-5 col-lg-9 px-lg-4">
+        <!--  Claude: una Nueva Etapa en la Inteligencia Artificial -->
+        <article class="row border-1 border-bottom pb-3" data-bs-spy="scroll" data-bs-target="#list-example"
+          data-bs-smooth-scroll="true">
+          <header>
+            <h1>Claude: una Nueva Etapa en la Inteligencia Artificial</h1>
+          </header>
+          <!-- Claude: una Nueva Etapa en la Inteligencia Artificial Intro -->
+          <div class="mt-3">
+            <div class="centrar-imagen magen-intro mb-5">
+              <figure class="img-container">
+                <img src="https://res.cloudinary.com/u0xebdyd/image/upload/v1788813438/claude-og.png" class="img-fluid"
+                  alt="Claude, el asistente de inteligencia artificial de Anthropi"
+                  title="Claude: una Nueva Etapa en la Inteligencia Artificial" loading="lazy" />
+                <figcaption class="img-caption">
+                  Claude, el asistente de Anthropic que inicia una nueva etapa en la inteligencia artificial.
+                </figcaption>
+              </figure>
+            </div>
+            <p>El avance de la inteligencia artificial ha transformado numerosos sectores, y Claude, el asistente
+              desarrollado por Anthropic, se ha consolidado como uno de los referentes de este campo. Este artículo
+              explica qué es Claude, cómo funciona, cuál es su evolución, qué herramientas lo rodean, dónde se aplica y
+              qué impacto puede tener en el futuro de la tecnología y la sociedad.</p>
+            <p></p>
+            <p></p>
+          </div>
+          <!--  Claude: una Nueva Etapa en la Inteligencia Artificial Intro Fin-->
+
+          <!-- Introducción a Claude -->
+          <div id="introduccion-a-claude" class="mt-3">
+            <h2>Introducción a Claude</h2>
+            <p>En la última década, la inteligencia artificial pasó de ser un concepto futurista a convertirse en una
+              herramienta cotidiana. Claude, creado por Anthropic, es una familia de modelos de lenguaje que ha captado
+              la atención de investigadores, empresas y usuarios en general. Su diseño busca mejorar la interacción
+              entre humanos y máquinas y, a la vez, elevar los estándares de seguridad y ética en el desarrollo de la
+              inteligencia artificial.</p>
+
+          </div>
+          <!-- Introducción a Claude Fin -->
+
+          <!-- Qué es Claude -->
+          <div id="que-es-claude" class="mt-3">
+            <h2>Qué es Claude</h2>
+            <p>Claude es un asistente de inteligencia artificial basado en modelos de lenguaje de gran tamaño (LLM, por
+              sus siglas en inglés), que trabajan con procesamiento del lenguaje natural (NLP). Su objetivo principal es
+              comprender y generar texto de forma coherente y útil, lo que facilita la comunicación entre las personas y
+              los sistemas automatizados. Anthropic lo desarrolla con especial atención a la seguridad y a la alineación
+              con valores humanos, es decir, a que el modelo se comporte de manera útil, honesta e inofensiva y minimice
+              los riesgos asociados al uso de la inteligencia artificial.</p>
+
+          </div>
+          <!-- Qué es Claude Fin -->
+
+          <!-- Cómo Funciona Claude -->
+          <div id="como-funciona-claude" class="mt-3">
+            <h2>Cómo Funciona Claude</h2>
+            <p>Los modelos de Claude se entrenan con grandes volúmenes de texto para aprender patrones del lenguaje, y
+              luego se refinan con técnicas orientadas a que sus respuestas sean útiles y seguras. Anthropic ha
+              desarrollado, entre otros enfoques, el entrenamiento guiado por principios explícitos (conocido como
+              Constitutional AI), que busca que el modelo siga un conjunto de valores definidos en lugar de depender
+              únicamente de la corrección humana caso por caso.
+            </p>
+            <p>Durante una conversación, el modelo trabaja con el contexto disponible: las instrucciones, los mensajes
+              anteriores y los documentos adjuntos. No aprende de forma permanente a partir de cada conversación; su
+              capacidad de adaptación proviene de ese contexto y de su entrenamiento previo.</p>
+          </div>
+          <!-- Cómo Funciona Claude Fin -->
+
+          <!-- Características principales -->
+          <div id="caracteristicas-principales" class="mt-3">
+            <h2>Características principales</h2>
+            <ul>
+              <li><span class="fw-bold">Planificación y ejecución autónoma</span>: al iniciar una tarea, Claude analiza
+                la solicitud, crea un plan y divide el trabajo complejo en subtareas cuando es necesario. </li>
+              <li><span class="fw-bold">Ejecución en la nube</span>: las tareas corren en un entorno aislado en los
+                servidores de Anthropic, y las sesiones y archivos quedan guardados en la cuenta del usuario, por lo que
+                el trabajo continúa aunque cierres el computador. </li>
+              <li><span class="fw-bold">Acceso controlado a archivos y red</span>: Claude solo puede leer y escribir en
+                las carpetas conectadas, y el acceso a red sigue la configuración de salida definida por el usuario.
+              </li>
+              <li><span class="fw-bold">Coordinación de tareas paralelas</span>: Claude puede coordinar varios flujos de
+                trabajo en paralelo cuando corresponde. </li>
+              <li><span class="fw-bold">Tareas programadas</span>: se pueden agendar tareas diarias, semanales o
+                mensuales para que Claude las ejecute sin intervención manual. </li>
+              <li><span class="fw-bold">Memoria compartida con el chat</span>: Memoria compartida entre el chat y
+                Cowork (solo en sesiones en la nube), lo que reduce la necesidad de repetir contexto. </li>
+            </ul>
+
+          </div>
+          <!-- Características principales Fin -->
+
+          <!-- Familia de Modelos y Formas de Acceso -->
+          <div id="familia-de-modelos-y-formas-de-acceso" class="mt-3">
+            <h2>Familia de Modelos y Formas de Acceso</h2>
+            <p>Claude no es un único modelo, sino una familia con distintos niveles de capacidad, velocidad y costo, de
+              modo que cada usuario o empresa pueda elegir el más adecuado para su necesidad. Se puede acceder a él
+              mediante la aplicación web, las aplicaciones móviles y de escritorio, una API para desarrolladores y
+              herramientas especializadas como Claude Code. Como los modelos y las funciones se actualizan con
+              frecuencia, conviene consultar la documentación oficial de Anthropic para conocer la oferta vigente.</p>
+
+          </div>
+          <!-- Familia de Modelos y Formas de Acceso Fin -->
+
+          <!-- Evolución de los Modelos: de Claude 1 a Fable 5 -->
+          <div id="evolucion-de-los-modelos-de-claude-1-a-fable-5" class="mt-3">
+            <h2>Evolución de los Modelos: de Claude 1 a Fable 5</h2>
+            <p>La historia de Claude avanza en cinco etapas, cada una con un aporte distinto:</p>
+            <ul>
+              <li><span class="fw-bold">Inicios (2023)</span>: el 14 de marzo llegaron Claude y Claude Instant (versión
+                ligera y económica). Después salieron Claude 2 y 2.1, centrados en el contexto y el uso empresarial.
+              </li>
+              <li><span class="fw-bold">Tres familias (2024)</span>: Claude 3 introdujo Haiku (rápido), Sonnet
+                (equilibrado) y Opus (máxima capacidad). Claude 3.5 sumó el uso del ordenador (computer use).</li>
+              <li><span class="fw-bold">Razonamiento y agentes (2025)</span>: Claude 3.7 Sonnet inauguró el razonamiento
+                híbrido junto con Claude Code, y Claude 4 y sus versiones posteriores (4.1, 4.5) reforzaron la
+                programación y las tareas de agente.</li>
+              <li><span class="fw-bold">Serie 4.x (2026)</span>: las versiones 4.5 a 4.8 refinaron precios, contexto,
+                herramientas y seguridad.</li>
+              <li><span class="fw-bold">Generación 5 y clase Mythos (2026)</span>: en abril apareció Mythos Preview, de
+                acceso restringido. El 9 de junio llegaron Fable 5 (acceso general) y Mythos 5 (organizaciones de
+                confianza). El acceso a ambos se suspendió el 12 de junio por una directiva de exportación y se
+                restableció el 1 de julio. Luego salieron Sonnet 5 y Opus 5 (30 de junio y 24 de julio), Fable 5.1 y
+                Mythos 5.1 (1 de septiembre) y, por último, Opus 5.5 y Sonnet 5.5 (finales de septiembre).</li>
+            </ul>
+
+            <!-- Resumen de Modelos  -->
+            <div id="resumen-de-modelos">
+              <h3>Resumen de Modelos </h3>
+              <div class="table-responsive mx-auto" style="width: 80%;">
+                <table class="table table-striped table-hover align-middle">
+                  <caption>Resumen de las generaciones de Claude, de 2023 a 2026.</caption>
+                  <thead class="table-dark">
+                    <tr>
+                      <th scope="col" style="width: 50%;">Generación</th>
+                      <th scope="col" class="text-nowrap" style="width: 1%;">Año</th>
+                      <th scope="col" class="text-nowrap" style="width: 1%;">Aporte principal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Claude 1 / Instant</th>
+                      <td class="text-nowrap">2023</td>
+                      <td class="text-nowrap">Primer asistente público y versión ligera</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Claude 2 / 2.1</th>
+                      <td class="text-nowrap">2023</td>
+                      <td class="text-nowrap">Mayor contexto y uso empresarial</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Claude 3 / 3.5</th>
+                      <td class="text-nowrap">2024</td>
+                      <td class="text-nowrap">Familias Haiku, Sonnet y Opus; <em>computer use</em></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Claude 3.7 / 4 / 4.5</th>
+                      <td class="text-nowrap">2025</td>
+                      <td class="text-nowrap">Razonamiento híbrido, agentes y programación</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Claude 4.6 a 4.8</th>
+                      <td class="text-nowrap">2026</td>
+                      <td class="text-nowrap">Refinamiento de contexto, herramientas y seguridad</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Fable 5 / Mythos 5</th>
+                      <td class="text-nowrap">2026</td>
+                      <td class="text-nowrap">Nueva clase Mythos, por encima de Opus</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Fable 5.1 / Mythos 5.1, Opus 5.5 y Sonnet 5.5</th>
+                      <td class="text-nowrap">2026</td>
+                      <td class="text-nowrap">Actualización más reciente de la generación 5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Resumen de Modelos fin -->
+
+            <!-- Cómo Elegir entre Modelos  -->
+            <div id="como-elegir-entre-modelos">
+              <h3>Cómo Elegir entre Modelos </h3>
+              <p>Conviene reservar los modelos de mayor capacidad (Fable, Opus) para tareas complejas, como razonamiento
+                extenso, programación avanzada o análisis profundo. Los intermedios (Sonnet) resultan adecuados para el
+                trabajo diario, y los más ligeros (Haiku) para tareas rápidas o de alto volumen.</p>
+            </div>
+            <!-- Cómo Elegir entre Modelos  fin -->
+
+          </div>
+          <!-- Evolución de los Modelos: de Claude 1 a Fable 5 Fin -->
+
+          <!-- Ecosistema de soluciones de Claude -->
+          <div id="ecosistema-de-soluciones-de-claude" class="mt-3">
+            <h2>Ecosistema de soluciones de Claude</h2>
+            <p>Además del chat, Claude se ofrece a través de herramientas pensadas para distintos perfiles y tareas.</p>
+
+            <!-- Para el Trabajo Cotidiano en el Chat -->
+            <div id="para-el-trabajo-cotidiano-en-el-chat">
+              <h3>Para el Trabajo Cotidiano en el Chat </h3>
+              <ul>
+                <li><span class="fw-bold">Projects (Proyectos)</span>: espacios de trabajo que agrupan conversaciones,
+                  documentos e instrucciones personalizadas sobre un mismo tema, para que Claude conserve el contexto de
+                  un trabajo en curso sin repetir la información.</li>
+                <li><span class="fw-bold">Artifacts</span>: ventanas donde Claude genera contenido independiente de la
+                  conversación, como documentos, páginas web, gráficos, herramientas interactivas o pequeñas
+                  aplicaciones, que se pueden ver, modificar y reutilizar en el mismo lugar.</li>
+                <li><span class="fw-bold">Búsqueda web e investigación profunda (Research)</span>: consulta de
+                  información actual en internet y elaboración de informes con fuentes citadas, lo que compensa la fecha
+                  de corte del conocimiento del modelo.</li>
+                <li><span class="fw-bold">Memoria</span>: permite recordar preferencias y datos relevantes entre
+                  conversaciones, con controles para que cada persona decida qué se guarda.</li>
+              </ul>
+            </div>
+            <!-- Para el Trabajo Cotidiano en el Chat  fin -->
+
+            <!-- Para Programación  -->
+            <div id="para-programacion">
+              <h3>Para Programación </h3>
+              <ul>
+                <li><span class="fw-bold">Claude Code</span>: herramienta de programación asistida que trabaja
+                  directamente sobre el código del usuario. Se utiliza desde la línea de comandos, la aplicación de
+                  escritorio o el móvil, y permite delegar tareas como escribir funciones, corregir errores, revisar
+                  código o explicar un proyecto ajeno.</li>
+              </ul>
+
+            </div>
+            <!-- Para Programación  fin -->
+
+            <!-- Para Trabajo del Conocimiento y Automatización  -->
+            <div id="para-trabajo-del-conocimiento-y-automatizacion">
+              <h3>Para Trabajo del Conocimiento y Automatización </h3>
+              <ul>
+                <li><span class="fw-bold">Claude Cowork</span>: aplicación de escritorio orientada a personas que no
+                  programan, para delegar tareas de oficina como organizar archivos, preparar documentos o procesar
+                  información.</li>
+                <li><span class="fw-bold">Claude in Chrome</span>: agente de navegación que recorre sitios web, completa
+                  formularios y realiza acciones en el navegador.</li>
+                <li><span class="fw-bold">Claude in Excel y Claude in PowerPoint</span>: complementos para crear
+                  fórmulas, limpiar datos, dar formato o redactar diapositivas sin salir de la aplicación.</li>
+                <li><span class="fw-bold">Claude Tag</span>: integración con Slack que permite mencionar a Claude en un
+                  canal para delegarle tareas frente a todo el equipo.</li>
+              </ul>
+            </div>
+            <!-- Para Trabajo del Conocimiento y Automatización  fin -->
+
+            <!-- Para Desarrolladores y Empresas  -->
+            <div id="para-desarrolladores-y-empresas">
+              <h3>Para Desarrolladores y Empresas </h3>
+              <ul>
+                <li><span class="fw-bold">API y Claude Platform</span>: acceso programático a los modelos para
+                  incorporar Claude en aplicaciones, servicios y flujos de trabajo propios.</li>
+                <li><span class="fw-bold">Conectores (MCP)</span>: integraciones con servicios externos, como correo,
+                  calendario, almacenamiento de archivos o gestores de tareas, con autorización del usuario.</li>
+                <li><span class="fw-bold">Skills</span>: conjuntos de instrucciones y recursos reutilizables que enseñan
+                  a Claude a realizar tareas específicas de forma consistente.</li>
+              </ul>
+            </div>
+            <!-- Para Desarrolladores y Empresas  fin -->
+
+            <!-- Cómo Elegir entre los Ecosistemas  -->
+            <div id="como-elegir-entre-los-ecosistemas">
+              <h3>Cómo Elegir entre los Ecosistemas </h3>
+              <div class="table-responsive mx-auto" style="width: 80%;">
+                <table class="table table-striped table-hover align-middle">
+                  <thead>
+                    <tr>
+                      <th>Necesidad</th>
+                      <th>Solución recomendada</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Conversar, redactar o analizar</td>
+                      <td>Chat</td>
+                    </tr>
+                    <tr>
+                      <td>Mantener contexto sobre un tema a largo plazo</td>
+                      <td>Projects</td>
+                    </tr>
+                    <tr>
+                      <td>Crear una página, gráfico o herramienta rápida</td>
+                      <td>Artifacts</td>
+                    </tr>
+                    <tr>
+                      <td>Programar o mantener un repositorio</td>
+                      <td>Claude Code</td>
+                    </tr>
+                    <tr>
+                      <td>Delegar tareas de oficina sin programar</td>
+                      <td>Claude Cowork</td>
+                    </tr>
+                    <tr>
+                      <td>Trabajar dentro de Excel o PowerPoint</td>
+                      <td>Claude in Excel / PowerPoint</td>
+                    </tr>
+                    <tr>
+                      <td>Integrar Claude en un producto propio</td>
+                      <td>API y Claude Platform</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="fst-italic">La disponibilidad de cada función puede variar según el plan y el país. Conviene
+                verificar el detalle vigente en la documentación oficial de Anthropic.</p>
+            </div>
+            <!-- Cómo Elegir entre los Ecosistemas  fin -->
+
+          </div>
+          <!-- Ecosistema de soluciones de Claude Fin -->
+
+          <!-- Aplicaciones de Claude -->
+          <div id="aplicaciones-de-claude" class="mt-3">
+            <h2>Aplicaciones de Claude</h2>
+            <ul>
+              <li><span class="fw-bold">Atención al cliente</span>: respuestas rápidas y precisas a las consultas de los
+                usuarios.</li>
+              <li><span class="fw-bold">Educación</span>: tutor virtual que ayuda a resolver dudas y a comprender
+                conceptos complejos.</li>
+              <li><span class="fw-bold">Creación de contenido</span>: generación de ideas, redacción de textos y
+                elaboración de guiones.</li>
+              <li><span class="fw-bold">Investigación</span>: revisión y resumen de grandes volúmenes de información y
+                extracción de datos relevantes.</li>
+            </ul>
+
+          </div>
+          <!-- Aplicaciones de Claude Fin -->
+
+          <!-- Limitaciones y Buenas Prácticas -->
+          <div id="limitaciones-y-buenas-practicas" class="mt-3">
+            <h2>Limitaciones y Buenas Prácticas</h2>
+            <ul>
+              <li><span class="fw-bold">Verificar la información importante</span>: claude puede presentar afirmaciones
+                incorrectas con seguridad, por lo que los datos relevantes deben contrastarse con fuentes confiables.
+              </li>
+              <li><span class="fw-bold">Considerar la fecha de corte</span>: su conocimiento tiene un límite temporal y,
+                para datos recientes, depende de herramientas de búsqueda.</li>
+              <li><span class="fw-bold">Proteger la información sensible</span>: conviene no compartir datos
+                confidenciales sin conocer las políticas de privacidad del servicio utilizado.</li>
+              <li><span class="fw-bold">Dar contexto claro</span>: cuanto más detalladas sean las instrucciones y los
+                ejemplos, mejores serán los resultados; además, se puede refinar el pedido en varias iteraciones.</li>
+              <li><span class="fw-bold">Consultar a profesionales</span>: en salud, derecho o finanzas, claude ofrece
+                apoyo informativo, pero no reemplaza el criterio experto.</li>
+              <li><span class="fw-bold">Revisar antes de usar</span>: el código, los cálculos y los documentos generados
+                deben probarse y validarse antes de llevarlos a un entorno real.</li>
+              <li><span class="fw-bold">Supervisar las herramientas con acciones</span>: en claude code o claude cowork
+                es aconsejable revisar los permisos y las acciones propuestas antes de aprobarlas.</li>
+            </ul>
+
+          </div>
+          <!-- Limitaciones y Buenas Prácticas Fin -->
+
+          <!-- Impacto en el Futuro -->
+          <div id="impacto-en-el-futuro" class="mt-3">
+            <h2>Impacto en el Futuro</h2>
+            <p>A medida que más empresas y organizaciones adopten esta tecnología, se espera que la interacción entre
+              humanos y máquinas sea cada vez más intuitiva y efectiva. El énfasis en la seguridad y la ética podría,
+              además, marcar un estándar para el desarrollo de otros modelos y favorecer un uso responsable.</p>
+            <p>También deben considerarse los desafíos: la dependencia excesiva de la tecnología, la protección de la
+              privacidad, el riesgo de desinformación y el impacto en el empleo. Abordarlos mediante regulación,
+              educación y transparencia es esencial para lograr un futuro sostenible.</p>
+          </div>
+          <!-- Impacto en el Futuro Fin -->
+
+          <!-- Conclusión -->
+          <div id="conclusion" class="mt-3">
+            <h2>Conclusión</h2>
+            <p>Claude representa un avance significativo en el campo de la inteligencia artificial, con soluciones que
+              buscan mejorar la interacción entre humanos y máquinas de forma segura. Su evolución desde 2023 hasta la
+              generación 5, junto con un ecosistema de herramientas para el chat, la programación y el trabajo de
+              oficina, lo convierte en una opción valiosa para muchos sectores. A medida que la tecnología evoluciona,
+              resulta fundamental mantener un diálogo abierto sobre su uso y sus implicaciones, de modo que Claude y
+              otros modelos similares contribuyan positivamente a la sociedad.</p>
+
+          </div>
+          <!-- Conclusión Fin -->
+
+        </article>
+        <article class="row" id="comments">
+          <h2>COMENTARIOS</h2>
+          <p>Si tiene alguna inquietud, duda o ha encontrado algún error, porfavor infórmelo a través del formulario
+            disponible para estepropósito.</p>
+          <div class="d-flex justify-content-center">
+            <form action="https://formspree.io/f/mdkdawkg" method="POST" id="myForm">
+              <fieldset class="d-flex flex-column gap-3">
+                <legend class="text-center fs-4">Deje su comentario</legend>
+                <div class="d-flex flex-column">
+                  <label for="name">Nombre:</label>
+                  <input type="text" name="name" id="name" placeholder="User" class="form-control rounded" required />
+                </div>
+                <div class="d-flex flex-column">
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="email" placeholder="user@mail.com" class="form-control rounded"
+                    required />
+                </div>
+                <div class="d-flex flex-column">
+                  <label for="message">Mensaje:</label>
+                  <textarea name="message" id="message" cols="30" rows="5" placeholder="Su comentario..."
+                    class="form-control rounded-3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-light my-3 border rounded-pill border-2">Enviar</button>
+              </fieldset>
+              <p class="small text-center">La política de privacidad, y los términos y condiciones estándisponibles en
+                el formulario de contacto.</p>
+            </form>
+          </div>
+        </article>
+        <!-- Comentarios fin -->
+      </section>
+      <!-- -------------------------------- barra lateral -------------------------------- -->
+      <aside class="col-lg-3 d-none d-lg-block">
+        <h2>En Este Artículo</h2>
+        <div class="menu-scroll">
+          <div class="menu-container">
+            <div class="border border-1">
+              <div class="menu-item">
+                <a href="#claude-una-nueva-etapa-en-la-inteligencia-artificial" class="simple-link">Claude: una Nueva
+                  Etapa en la Inteligencia Artificial</a>
+              </div>
+              <div class="menu-item">
+                <a href="#introduccion-a-claude" class="simple-link">Introducción a Claude</a>
+              </div>
+              <div class="menu-item">
+                <a href="#que-es-claude" class="simple-link">Qué es Claude</a>
+              </div>
+              <div class="menu-item">
+                <a href="#como-funciona-claude" class="simple-link">Cómo Funciona Claude</a>
+              </div>
+              <div class="menu-item">
+                <a href="#caracteristicas-principales" class="simple-link">Características principales</a>
+              </div>
+              <div class="menu-item">
+                <a href="#familia-de-modelos-y-formas-de-acceso" class="simple-link">Familia de Modelos y Formas de
+                  Acceso</a>
+              </div>
+              <div class="menu-item">
+                <a href="#evolucion-de-los-modelos-de-claude-1-a-fable-5" class="simple-link">Evolución de los Modelos:
+                  de Claude 1 a Fable 5</a>
+                </li>
+                <div class="menu-item">
+                  <a href="#ecosistema-de-soluciones-de-claude" class="simple-link">Ecosistema de soluciones de
+                    Claude</a>
+                </div>
+                <div class="menu-item">
+                  <a href="#aplicaciones-de-claude" class="simple-link">Aplicaciones de Claude</a>
+                </div>
+                <div class="menu-item">
+                  <a href="#limitaciones-y-buenas-practicas" class="simple-link">Limitaciones y Buenas Prácticas</a>
+                </div>
+                <div class="menu-item">
+                  <a href="#impacto-en-el-futuro" class="simple-link">Impacto en el Futuro</a>
+                </div>
+                <div class="menu-item">
+                  <a href="#conclusion" class="simple-link">Conclusión</a>
+                </div>
+
+                <!-- Comentarios  -->
+                <div class="menu-item">
+                  <a href="#comments" class="simple-link">Comentarios</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </aside>
+      <!-- -------------------------------- fin barra lateral -------------------------------- -->
+    </main>
+  </div>
+  <!--  Principal Fin  -->
+
+  <!--  pie de pagina  -->
+  <footer class="row border-top border-1 m-1 mt-auto">
+    <div class="row">
+      <!-- contacto -->
+      <address class="col-lg-4 d-flex flex-column align-items-center">
+        <div class="text-center fs-2">Contacto</div>
+        <div class="d-flex flex-row align-items-center">
+          <i class="bi bi-envelope-at fs-3"></i>
+          <span class="ms-3">
+            <a class="text-decoration-none" href="mailto:ehfeduardo@gmail.com">ehfeduardo@gmail.com</a>
+          </span>
+        </div>
+        <div class="d-flex flex-row align-items-center">
+          <i class="bi bi-geo-alt fs-3"></i>
+          <span class="ms-3">Bogotá D. C. - Colombia</span>
+        </div>
+      </address>
+      <!-- Derechos de autor -->
+      <div class="col-lg-4 d-flex flex-column align-items-center justify-content-center h-100">
+        <div>
+          <i class="bi bi-c-circle fs-5"></i>
+        </div>
+        <div class="ms-2">All Rights Reserved 2025</div>
+      </div>
+      <!-- redes sociales -->
+      <div class="col-lg-4 d-flex flex-column align-items-center">
+        <div class="text-center fs-2">Redes Sociales</div>
+        <div class="d-flex justify-content-evenly align-items-center gap-5">
+          <div>
+            <a href="https://www.linkedin.com/in/eduardoherreraf/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-linkedin fs-1"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/eduardoherreraf" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-github fs-1"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/eduardoherreraforero/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook fs-1"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/ehfeduardo/" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-twitter-x fs-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center gap-2"></div>
+  </footer>
+  <!--  pie de pagina fin  -->
+
+  <!-- button to top -->
+  <button onclick="topFunction()" id="myBtnScroll" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-bar-up"
+      viewBox="0 0 16 16" style="margin-left: -2px">
+      <path fill-rule="evenodd"
+        d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5">
+      </path>
+    </svg>
+  </button>
+  <!-- Fin button to top -->
+</body>
+
+</html>
